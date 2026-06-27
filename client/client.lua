@@ -101,7 +101,7 @@ if Config.MedicAssistant then
                             if GetEntityHealth(playerPed) ~= GetEntityMaxHealth(playerPed) then
                                 TriggerServerEvent('bcc_medical:checkout')
                             else
-                                VORPcore.NotifyAvanced(_U('noNeedMedicalAssistance'), "blips", "blip_supplies_health", "COLOR_GREEN", 4000)
+                                VORPcore.NotifyAdvanced(_U('noNeedMedicalAssistance'), "blips", "blip_supplies_health", "COLOR_GREEN", 4000)
                             end
                         end
                     else
@@ -111,7 +111,7 @@ if Config.MedicAssistant then
                             if GetEntityHealth(playerPed) ~= GetEntityMaxHealth(playerPed) then
                                 TriggerServerEvent('bcc_medical:checkoutRevive')
                             else
-                                VORPcore.NotifyAvanced(_U('noNeedMedicalAssistance'), "blips", "blip_supplies_health", "COLOR_GREEN", 4000)
+                                VORPcore.NotifyAdvanced(_U('noNeedMedicalAssistance'), "blips", "blip_supplies_health", "COLOR_GREEN", 4000)
                             end
                         end
                     end
