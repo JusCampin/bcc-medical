@@ -413,7 +413,7 @@ AddEventHandler('bcc_medical:checkout', function()
     -- Check if the player has enough money
     if money < Config.AssistantHealMoney then
         -- Send notification for insufficient money
-        VORPcore.NotifyAvanced(_source, _U('notEnoughMoney') .. (Config.AssistantHealMoney - money), "inventory_items", "money_billstack", "COLOR_RED", 4000)
+        VORPcore.NotifyAdvanced(_source, _U('notEnoughMoney') .. (Config.AssistantHealMoney - money), "inventory_items", "money_billstack", "COLOR_RED", 4000)
         return
     end
 
@@ -427,7 +427,7 @@ AddEventHandler('bcc_medical:checkout', function()
     UpdateBleed(_source)
 
     -- Send a notification for successful healing
-    VORPcore.NotifyAvanced(_source, _U('medicalAssistantTreated') .. Config.AssistantHealMoney, "inventory_items", "money_billstack", "COLOR_GREEN", 4000)
+    VORPcore.NotifyAdvanced(_source, _U('medicalAssistantTreated') .. Config.AssistantHealMoney, "inventory_items", "money_billstack", "COLOR_GREEN", 4000)
 
 end)
 
@@ -446,7 +446,7 @@ AddEventHandler('bcc_medical:checkoutRevive', function()
 
     if not Config.gonegative and money < Config.AssistantReviveMoney then
         -- Send notification for insufficient money
-        VORPcore.NotifyAvanced(_source, _U('notEnoughMoney') .. (Config.AssistantReviveMoney - money), "inventory_items", "money_billstack", "COLOR_RED", 4000)
+        VORPcore.NotifyAdvanced(_source, _U('notEnoughMoney') .. (Config.AssistantReviveMoney - money), "inventory_items", "money_billstack", "COLOR_RED", 4000)
         return
     end
 
@@ -456,7 +456,7 @@ AddEventHandler('bcc_medical:checkoutRevive', function()
 
     UpdateBleed(_source)
 
-    VORPcore.NotifyAvanced(_source, _U('medicalAssistantRevive') .. Config.AssistantReviveMoney, "inventory_items", "money_billstack", "COLOR_GREEN", 4000)
+    VORPcore.NotifyAdvanced(_source, _U('medicalAssistantRevive') .. Config.AssistantReviveMoney, "inventory_items", "money_billstack", "COLOR_GREEN", 4000)
 end)
 
 -- Per vorp docs these only require AddEventHandler
